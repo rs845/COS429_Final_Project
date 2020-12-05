@@ -190,7 +190,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     training_size = 224
-    test_size = 128
+    test_size = 168
     
     # initialize dataflow
     train_flow, valid_flow, test_flow_nearest, test_flow_box, test_flow_lanczos, test_flow_hamming = dataFlow(training_size, test_size)
