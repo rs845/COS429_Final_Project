@@ -52,7 +52,8 @@ def dataFlow(train_size, test_size):
         base_path + 'valid/',
         target_size=(train_size, train_size),
         batch_size=64,
-        class_mode='binary'
+        class_mode='binary',
+        shuffle = False
         )
 
     test_flow_nearest = image_gen.flow_from_directory(
@@ -60,7 +61,8 @@ def dataFlow(train_size, test_size):
         target_size=(test_size, test_size),
         batch_size=64,
         class_mode='binary',
-        interpolation = "nearest"
+        interpolation = "nearest",
+        shuffle = False
     )
 
     test_flow_box = image_gen.flow_from_directory(
@@ -68,7 +70,8 @@ def dataFlow(train_size, test_size):
         target_size=(test_size, test_size),
         batch_size=64,
         class_mode='binary',
-        interpolation="box"
+        interpolation="box",
+        shuffle = False
     )
 
     test_flow_lanczos = image_gen.flow_from_directory(
@@ -76,7 +79,8 @@ def dataFlow(train_size, test_size):
         target_size=(test_size, test_size),
         batch_size=64,
         class_mode='binary',
-        interpolation="lanczos"
+        interpolation="lanczos",
+        shuffle = False
     )
 
     test_flow_hamming = image_gen.flow_from_directory(
@@ -84,15 +88,17 @@ def dataFlow(train_size, test_size):
         target_size=(test_size, test_size),
         batch_size=64,
         class_mode='binary',
-        interpolation="hamming"
+        interpolation="hamming",
+        shuffle = False
     )
 
     return train_flow, valid_flow, test_flow_nearest, test_flow_box, test_flow_lanczos, test_flow_hamming
 
 def train_and_test(model_name, compression_type, training_size, test_size):
 # train model
-    if compression_type == "nearest":
+    if compression_type == "basic":
         start = time.process_time()
+        print("training")
         model = train(model_name, train_flow, valid_flow)
         end = time.process_time()
     else:
@@ -103,6 +109,7 @@ def train_and_test(model_name, compression_type, training_size, test_size):
             #input_shape=(224,224,3)
         ) 
         model = build_model(model)
+        print("loading weight")
         model.load_weights("results/cp.ckpt")
         end = time.process_time()
 
@@ -126,37 +133,39 @@ def train_and_test(model_name, compression_type, training_size, test_size):
     # test_flow =
 
     start = time.process_time()
-    train_pred = model.predict(train_flow, steps=1)
-    train_test = train_flow.classes
-    print(train_pred)
-    train_accuracy = metrics.accuracy_score(train_test, np.round(train_pred))
+    train_pred = model.predict(valid_flow, steps=1)
+    train_test = valid_flow.classes
+    train_accuracy = metrics.accuracy_score(train_test[0:64], np.round(train_pred))
+    # train_accuracy = history.history["accuracy"]
     test_pred = model.predict(test_flow, steps=1)
     test_test = test_flow.classes
-    test_accuracy = metrics.accuracy_score(test_test, np.round(test_pred))
+    test_accuracy = metrics.accuracy_score(test_test[0:64], np.round(test_pred))
     print("Sample predictions: ", np.round(test_pred[0:64]))
     print("Sample actual labels: ", test_test[0:64])
-    test_matrix = metrics.confusion_matrix(test_test, np.round(test_pred)).ravel()
+    test_matrix = metrics.confusion_matrix(test_test[0:64], np.round(test_pred)).ravel()
     end = time.process_time()
 
     test_time = end-start
 
 
     # save results
-    
-    with open("results/%s_results.txt" % model_name, "a") as f:
-        f.write("Model: %s\n" % model_name)
-        f.write("Image Compression: %s\n" % compression)
-        f.write("Train Image Size: %d\n" % training_size)
-        f.write("Test Image Size: %d\n" % test_size)
-        f.write("Train accuracy: %f\n" % train_accuracy)
-        f.write("Test accuracy: %f\n" % test_accuracy)
-        f.write("True Negatives: %f\n" % test_matrix[0])
-        f.write("False Positives: %f\n" % test_matrix[1])
-        f.write("False Negatives: %f\n" % test_matrix[2])
-        f.write("True Positives: %f\n" % test_matrix[3])
-        f.write("Training Time: %s sec\n" % training_time)            
-        f.write("Testing Time: %s sec\n" % test_time)
-        f.write("\n\n")
+    try:
+        with open("results/%s_results.txt" % model_name, "a") as f:
+            f.write("Model: %s\n" % model_name)
+            f.write("Image Compression: %s\n" % compression)
+            f.write("Train Image Size: %d\n" % training_size)
+            f.write("Test Image Size: %d\n" % test_size)
+            f.write("Train accuracy: %f\n" % train_accuracy)
+            f.write("Test accuracy: %f\n" % test_accuracy)
+            f.write("True Negatives: %f\n" % test_matrix[0])
+            f.write("False Positives: %f\n" % test_matrix[1])
+            f.write("False Negatives: %f\n" % test_matrix[2])
+            f.write("True Positives: %f\n" % test_matrix[3])
+            f.write("Training Time: %s sec\n" % training_time)            
+            f.write("Testing Time: %s sec\n" % test_time)
+            f.write("\n\n")
+    except Exception as e:
+        print(e)
 
     return {
         "Model" : model_name,

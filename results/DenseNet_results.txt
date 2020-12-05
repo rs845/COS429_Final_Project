@@ -1,73 +1,126 @@
-
+Model: DenseNet
+Image Compression: nearest
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.496599
+Test accuracy: 0.499200
+True Negatives: 112.000000
+False Positives: 4887.000000
+False Negatives: 120.000000
+True Positives: 4879.000000
+Training Time: 34.58166 sec
+Testing Time: 7353.93476 sec
 
 
 Model: DenseNet
 Image Compression: nearest
-Train Image Size: 256
+Train Image Size: 224
 Test Image Size: 128
-Train accuracy: 0.078125
-Test accuracy: 0.078125
-True Negatives: 5.000000
-False Positives: 59.000000
-False Negatives: 0.000000
-True Positives: 0.000000
-Training Time: 11.882940000000001 sec
-Testing Time: 59.87662300000001 sec
+Train accuracy: 0.929686
+Test accuracy: 0.518404
+True Negatives: 208.000000
+False Positives: 4791.000000
+False Negatives: 24.000000
+True Positives: 4975.000000
+Training Time: 31.221351 sec
+Testing Time: 6932.5628209999995 sec
 
 
 Model: DenseNet
 Image Compression: box
-Train Image Size: 256
+Train Image Size: 224
 Test Image Size: 128
-Train accuracy: 0.125000
-Test accuracy: 0.109375
-True Negatives: 7.000000
-False Positives: 57.000000
-False Negatives: 0.000000
-True Positives: 0.000000
-Training Time: 11.850926000000001 sec
-Testing Time: 59.24672000000001 sec
+Train accuracy: 0.929686
+Test accuracy: 0.534107
+True Negatives: 414.000000
+False Positives: 4585.000000
+False Negatives: 73.000000
+True Positives: 4926.000000
+Training Time: 29.49706900000001 sec
+Testing Time: 6969.182325999999 sec
 
 
 Model: DenseNet
 Image Compression: lanczos
-Train Image Size: 256
+Train Image Size: 224
 Test Image Size: 128
-Train accuracy: 0.109375
+Train accuracy: 0.929686
+Test accuracy: 0.541608
+True Negatives: 513.000000
+False Positives: 4486.000000
+False Negatives: 97.000000
+True Positives: 4902.000000
+Training Time: 30.75868300000002 sec
+Testing Time: 7008.350725 sec
+
+
+Model: DenseNet
+Image Compression: nearest
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.875000
 Test accuracy: 0.078125
 True Negatives: 5.000000
 False Positives: 59.000000
 False Negatives: 0.000000
 True Positives: 0.000000
-Training Time: 14.554777999999999 sec
-Testing Time: 60.41414399999999 sec
-
-
-Model: DenseNet
-Image Compression: hamming
-Train Image Size: 256
-Test Image Size: 128
-Train accuracy: 0.203125
-Test accuracy: 0.046875
-True Negatives: 3.000000
-False Positives: 61.000000
-False Negatives: 0.000000
-True Positives: 0.000000
-Training Time: 13.240265000000022 sec
-Testing Time: 60.080018000000024 sec
+Training Time: 30.068261999999997 sec
+Testing Time: 48.180715000000006 sec
 
 
 Model: DenseNet
 Image Compression: nearest
-Train Image Size: 256
+Train Image Size: 224
 Test Image Size: 128
-Train accuracy: 0.140625
-Test accuracy: 0.031250
-True Negatives: 2.000000
-False Positives: 62.000000
+Train accuracy: 0.875000
+Test accuracy: 0.078125
+True Negatives: 5.000000
+False Positives: 59.000000
 False Negatives: 0.000000
 True Positives: 0.000000
-Training Time: 197236.159059 sec
-Testing Time: 56.40303099999437 sec
+Training Time: 32.056115 sec
+Testing Time: 46.653674 sec
+
+
+Model: DenseNet
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.875000
+Test accuracy: 0.125000
+True Negatives: 8.000000
+False Positives: 56.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 34.413127 sec
+Testing Time: 47.45336599999999 sec
+
+
+Model: DenseNet
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.875000
+Test accuracy: 0.156250
+True Negatives: 10.000000
+False Positives: 54.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 35.296355000000005 sec
+Testing Time: 49.045604999999995 sec
+
+
+Model: DenseNet
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.875000
+Test accuracy: 0.140625
+True Negatives: 9.000000
+False Positives: 55.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 32.09663500000002 sec
+Testing Time: 49.67831899999999 sec
 
 
