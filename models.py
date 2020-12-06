@@ -92,21 +92,29 @@ def train_inception(training_steps, validation_steps, train_flow, valid_flow):
 
 def train_xception(training_steps, validation_steps, train_flow, valid_flow):
     model = Xception(
-        include_top=False,
         weights="imagenet",
-        input_shape=(224,224,3),
-        classifier_activation="softmax",
+        include_top=False,
+        input_shape=(224,224,3)
+        # classifier_activation="softmax",
     )
     Xceptionnet = build_model(model)
     Xceptionnet.summary()
+    checkpoint_path = "results/Xception.ckpt"
+
+    # Create a callback that saves the model's weights
+    cp_callback = tf.keras.callbacks.ModelCheckpoint(filepath=checkpoint_path,
+                                                    save_weights_only=True,
+                                                    verbose=1)
+
     Xceptionnet.fit(
         train_flow,
         epochs = 1,
         steps_per_epoch = training_steps,
         validation_data = valid_flow,
-        validation_steps = validation_steps
+        validation_steps = validation_steps,
+        callbacks = [cp_callback]
     )
-    return model
+    return Xceptionnet
 
 def train_VGG(training_steps, validation_steps, train_flow, valid_flow):
     model = VGG19(
