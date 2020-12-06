@@ -41,6 +41,129 @@ Training Time: 30.75868300000002 sec
 Testing Time: 7008.350725 sec
 
 
+Model: DenseNet
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.929686
+Test accuracy: 0.539108
+True Negatives: 479.000000
+False Positives: 4520.000000
+False Negatives: 88.000000
+True Positives: 4911.000000
+Training Time: 32.186652 sec
+Testing Time: 6547.130653 sec
 
+
+Model: DenseNet
+Image Compression: nearest
+Train Image Size: 224
+Test Image Size: 224
+Train accuracy: 0.929686
+Test accuracy: 0.932887
+True Negatives: 4435.000000
+False Positives: 564.000000
+False Negatives: 107.000000
+True Positives: 4892.000000
+Training Time: 31.622517 sec
+Testing Time: 10333.235130000001 sec
+
+
+Model: DenseNet
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 224
+Train accuracy: 0.929686
+Test accuracy: 0.937287
+True Negatives: 4499.000000
+False Positives: 500.000000
+False Negatives: 127.000000
+True Positives: 4872.000000
+Training Time: 30.065881000000445 sec
+Testing Time: 10476.239055999999 sec
+
+
+Model: DenseNet
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 224
+Train accuracy: 0.929686
+Test accuracy: 0.946789
+True Negatives: 4648.000000
+False Positives: 351.000000
+False Negatives: 181.000000
+True Positives: 4818.000000
+Training Time: 29.38850900000034 sec
+Testing Time: 10467.887717000001 sec
+
+
+Model: DenseNet
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 224
+Train accuracy: 0.929686
+Test accuracy: 0.941388
+True Negatives: 4591.000000
+False Positives: 408.000000
+False Negatives: 178.000000
+True Positives: 4821.000000
+Training Time: 29.915372999999818 sec
+Testing Time: 10454.970295 sec
+
+
+Model: DenseNet
+Image Compression: nearest
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.929686
+Test accuracy: 0.693539
+True Negatives: 1974.000000
+False Positives: 3025.000000
+False Negatives: 39.000000
+True Positives: 4960.000000
+Training Time: 29.552866999998514 sec
+Testing Time: 8539.061262000003 sec
+
+
+Model: DenseNet
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.929686
+Test accuracy: 0.755451
+True Negatives: 2607.000000
+False Positives: 2392.000000
+False Negatives: 53.000000
+True Positives: 4946.000000
+Training Time: 29.475311000001966 sec
+Testing Time: 8564.784047000001 sec
+
+
+Model: DenseNet
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.929686
+Test accuracy: 0.803361
+True Negatives: 3126.000000
+False Positives: 1873.000000
+False Negatives: 93.000000
+True Positives: 4906.000000
+Training Time: 29.879460000003746 sec
+Testing Time: 8275.864003999995 sec
+
+
+Model: DenseNet
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.929686
+Test accuracy: 0.785157
+True Negatives: 2935.000000
+False Positives: 2064.000000
+False Negatives: 84.000000
+True Positives: 4915.000000
+Training Time: 35.33005499999854 sec
+Testing Time: 8460.498282 sec
 
 

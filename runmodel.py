@@ -133,20 +133,32 @@ def train_and_test(model_name, compression_type, training_size, test_size):
     # test_flow =
 
     start = time.process_time()
-    train_pred = model.predict(valid_flow, steps=1)
+    train_pred = model.predict(valid_flow)
     train_test = valid_flow.classes
-    train_accuracy = metrics.accuracy_score(train_test[0:64], np.round(train_pred))
+    train_accuracy = metrics.accuracy_score(train_test, np.round(train_pred))
     # train_accuracy = history.history["accuracy"]
-    test_pred = model.predict(test_flow, steps=1)
+    test_pred = model.predict(test_flow)
     test_test = test_flow.classes
-    test_accuracy = metrics.accuracy_score(test_test[0:64], np.round(test_pred))
-    print("Sample predictions: ", np.round(test_pred[0:64]))
-    print("Sample actual labels: ", test_test[0:64])
-    test_matrix = metrics.confusion_matrix(test_test[0:64], np.round(test_pred)).ravel()
+    test_accuracy = metrics.accuracy_score(test_test, np.round(test_pred))
+    print("Sample predictions: ", np.round(test_pred))
+    print("Sample actual labels: ", test_test)
+    test_matrix = metrics.confusion_matrix(test_test, np.round(test_pred)).ravel()
     end = time.process_time()
 
     test_time = end-start
 
+    print("Model: %s\n" % model_name)
+    print("Image Compression: %s\n" % compression)
+    print("Train Image Size: %d\n" % training_size)
+    print("Test Image Size: %d\n" % test_size)
+    print("Train accuracy: %f\n" % train_accuracy)
+    print("Test accuracy: %f\n" % test_accuracy)
+    print("True Negatives: %f\n" % test_matrix[0])
+    print("False Positives: %f\n" % test_matrix[1])
+    print("False Negatives: %f\n" % test_matrix[2])
+    print("True Positives: %f\n" % test_matrix[3])
+    print("Training Time: %s sec\n" % training_time)            
+    print("Testing Time: %s sec\n" % test_time)
 
     # save results
     try:
@@ -164,6 +176,7 @@ def train_and_test(model_name, compression_type, training_size, test_size):
             f.write("Training Time: %s sec\n" % training_time)            
             f.write("Testing Time: %s sec\n" % test_time)
             f.write("\n\n")
+            f.close()
     except Exception as e:
         print(e)
 
@@ -190,10 +203,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     training_size = 224
-    test_size = 168
-    
-    # initialize dataflow
-    train_flow, valid_flow, test_flow_nearest, test_flow_box, test_flow_lanczos, test_flow_hamming = dataFlow(training_size, test_size)
 
     models = [
         "DenseNet",
@@ -219,20 +228,30 @@ if __name__ == "__main__":
 
     # compression = args.compression
 
+    compression_sizes = [
+        224,
+        176
+        # 128
+    ]
+
     save_path = "results/results.csv"
+    for test_size in compression_sizes:
+        for compression in compressions:
 
-    for compression in compressions:
+            # initialize dataflow
+            train_flow, valid_flow, test_flow_nearest, test_flow_box, test_flow_lanczos, test_flow_hamming = dataFlow(training_size, test_size)
+        
         # Create new save file if it doesn't exist
-        if not os.path.exists(save_path):
-            results = pd.DataFrame(columns=COLUMNS)
-        else:
-            results = pd.read_csv(save_path, float_precision='round_trip')
+            if not os.path.exists(save_path):
+                results = pd.DataFrame(columns=COLUMNS)
+            else:
+                results = pd.read_csv(save_path, float_precision='round_trip')
 
-        try:
-            results = results.append(train_and_test(model_name, compression, training_size, test_size), ignore_index=True)
-            results.to_csv(save_path, index=False)
-        except Exception as e:
-            print(traceback.format_exc())
+            try:
+                results = results.append(train_and_test(model_name, compression, training_size, test_size), ignore_index=True)
+                results.to_csv(save_path, index=False)
+            except Exception as e:
+                print(traceback.format_exc())
     
 
 
