@@ -1,12 +1,12 @@
 import cv2
 import numpy as np
 from tensorflow.keras import layers
-from tensorflow.keras.applications import DenseNet121
+from tensorflow.keras.applications import DenseNet121, VGG19, InceptionV3
 from tensorflow.keras.callbacks import Callback, ModelCheckpoint
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.optimizers import Adam
-from models import train, build_model
+from models import train, build_model, build_vgg
 import argparse
 import pandas as pd
 import time
@@ -38,7 +38,7 @@ COLUMNS = [
 
 # importing data
 def dataFlow(train_size, test_size):
-    base_path = '/Users/rachelsylwester/Desktop/archive/real_vs_fake/real-vs-fake/'
+    base_path = '/Users/Kids/Desktop/COS429_Final_Project/real-vs-fake/'
     image_gen = ImageDataGenerator(rescale=1./255.)
 
     train_flow = image_gen.flow_from_directory(
@@ -52,7 +52,8 @@ def dataFlow(train_size, test_size):
         base_path + 'valid/',
         target_size=(train_size, train_size),
         batch_size=64,
-        class_mode='binary'
+        class_mode='binary',
+        shuffle=False
         )
 
     test_flow_nearest = image_gen.flow_from_directory(
@@ -60,7 +61,8 @@ def dataFlow(train_size, test_size):
         target_size=(test_size, test_size),
         batch_size=64,
         class_mode='binary',
-        interpolation = "nearest"
+        interpolation = "nearest",
+        shuffle=False
     )
 
     test_flow_box = image_gen.flow_from_directory(
@@ -68,7 +70,8 @@ def dataFlow(train_size, test_size):
         target_size=(test_size, test_size),
         batch_size=64,
         class_mode='binary',
-        interpolation="box"
+        interpolation="box",
+        shuffle=False
     )
 
     test_flow_lanczos = image_gen.flow_from_directory(
@@ -76,7 +79,8 @@ def dataFlow(train_size, test_size):
         target_size=(test_size, test_size),
         batch_size=64,
         class_mode='binary',
-        interpolation="lanczos"
+        interpolation="lanczos",
+        shuffle=False
     )
 
     test_flow_hamming = image_gen.flow_from_directory(
@@ -84,7 +88,8 @@ def dataFlow(train_size, test_size):
         target_size=(test_size, test_size),
         batch_size=64,
         class_mode='binary',
-        interpolation="hamming"
+        interpolation="hamming",
+        shuffle=False
     )
 
     return train_flow, valid_flow, test_flow_nearest, test_flow_box, test_flow_lanczos, test_flow_hamming
@@ -93,17 +98,17 @@ def train_and_test(model_name, compression_type, training_size, test_size):
 # train model
     if compression_type == "nearest":
         start = time.process_time()
-        model = train(model_name, train_flow, valid_flow)
+        model, history = train(model_name, train_flow, valid_flow)
         end = time.process_time()
     else:
         start = time.process_time()
-        model = DenseNet121(
+        model = InceptionV3(
             weights= None,
             include_top=False,
             #input_shape=(224,224,3)
         ) 
         model = build_model(model)
-        model.load_weights("results/cp.ckpt")
+        model.load_weights("results/inception.ckpt")
         end = time.process_time()
 
     training_time = end-start
@@ -126,11 +131,16 @@ def train_and_test(model_name, compression_type, training_size, test_size):
     # test_flow =
 
     start = time.process_time()
-    train_pred = model.predict(train_flow, steps=1)
-    train_test = train_flow.classes
-    print(train_pred)
+    train_pred = model.predict(valid_flow)
+    # print('length of train+pred')
+    # print(len(train_pred))
+    train_test = valid_flow.classes
+    # print('TRAIN PRED:')
+    # print(np.round(train_pred))
+    # print('TRAIN TEST')
+    # print(train_test[0:64])
     train_accuracy = metrics.accuracy_score(train_test, np.round(train_pred))
-    test_pred = model.predict(test_flow, steps=1)
+    test_pred = model.predict(test_flow)
     test_test = test_flow.classes
     test_accuracy = metrics.accuracy_score(test_test, np.round(test_pred))
     print("Sample predictions: ", np.round(test_pred[0:64]))
