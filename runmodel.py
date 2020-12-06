@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 from tensorflow.keras import layers
 from tensorflow.keras.applications import DenseNet121
+from tensorflow.keras.applications import Xception
 from tensorflow.keras.callbacks import Callback, ModelCheckpoint
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.models import Sequential
@@ -96,21 +97,21 @@ def dataFlow(train_size, test_size):
 
 def train_and_test(model_name, compression_type, training_size, test_size):
 # train model
-    if compression_type == "basic":
+    if compression_type == "nearest" and test_size == 224:
         start = time.process_time()
         print("training")
         model = train(model_name, train_flow, valid_flow)
         end = time.process_time()
     else:
         start = time.process_time()
-        model = DenseNet121(
+        model = Xception(
             weights= None,
             include_top=False,
             #input_shape=(224,224,3)
         ) 
         model = build_model(model)
         print("loading weight")
-        model.load_weights("results/cp.ckpt")
+        model.load_weights("results/Xception.ckpt")
         end = time.process_time()
 
     training_time = end-start
@@ -230,8 +231,8 @@ if __name__ == "__main__":
 
     compression_sizes = [
         224,
-        176
-        # 128
+        176,
+        128
     ]
 
     save_path = "results/results.csv"
@@ -241,7 +242,7 @@ if __name__ == "__main__":
             # initialize dataflow
             train_flow, valid_flow, test_flow_nearest, test_flow_box, test_flow_lanczos, test_flow_hamming = dataFlow(training_size, test_size)
         
-        # Create new save file if it doesn't exist
+            # Create new save file if it doesn't exist
             if not os.path.exists(save_path):
                 results = pd.DataFrame(columns=COLUMNS)
             else:
