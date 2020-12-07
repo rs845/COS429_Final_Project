@@ -1,0 +1,490 @@
+Model: InceptionNet
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 1.000000
+Test accuracy: 1.000000
+True Negatives: 64.000000
+Model: InceptionNet
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 1.000000
+Test accuracy: 1.000000
+True Negatives: 64.000000
+Model: InceptionNet
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 1.000000
+Test accuracy: 1.000000
+True Negatives: 64.000000
+Model: InceptionNet
+Image Compression: nearest
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.203125
+Test accuracy: 0.718750
+True Negatives: 46.000000
+False Positives: 18.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 113.890625 sec
+Testing Time: 17.5 sec
+
+
+Model: InceptionNet
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.187500
+Test accuracy: 0.687500
+True Negatives: 44.000000
+False Positives: 20.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 10.46875 sec
+Testing Time: 17.34375 sec
+
+
+Model: InceptionNet
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.250000
+Test accuracy: 0.625000
+True Negatives: 40.000000
+False Positives: 24.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 9.875 sec
+Testing Time: 17.25 sec
+
+
+Model: InceptionNet
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.234375
+Test accuracy: 0.625000
+True Negatives: 40.000000
+False Positives: 24.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 10.5625 sec
+Testing Time: 17.3125 sec
+
+
+Model: InceptionNet
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 1.000000
+Test accuracy: 1.000000
+True Negatives: 64.000000
+Model: InceptionNet
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 1.000000
+Test accuracy: 1.000000
+True Negatives: 64.000000
+Model: InceptionNet
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 1.000000
+Test accuracy: 1.000000
+True Negatives: 64.000000
+Model: InceptionNet
+Image Compression: nearest
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.955500
+Test accuracy: 0.500000
+True Negatives: 0.000000
+False Positives: 5000.000000
+False Negatives: 0.000000
+True Positives: 5000.000000
+Training Time: 65903.828125 sec
+Testing Time: 2415.8125 sec
+
+
+Model: InceptionNet
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.955500
+Test accuracy: 0.500000
+True Negatives: 0.000000
+False Positives: 5000.000000
+False Negatives: 0.000000
+True Positives: 5000.000000
+Training Time: 8.875 sec
+Testing Time: 2440.765625 sec
+
+
+Model: InceptionNet
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.955500
+Test accuracy: 0.500000
+True Negatives: 0.000000
+False Positives: 5000.000000
+False Negatives: 0.000000
+True Positives: 5000.000000
+Training Time: 8.703125 sec
+Testing Time: 2386.03125 sec
+
+
+Model: InceptionNet
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.955500
+Test accuracy: 0.500000
+True Negatives: 0.000000
+False Positives: 5000.000000
+False Negatives: 0.000000
+True Positives: 5000.000000
+Training Time: 8.96875 sec
+Testing Time: 2386.703125 sec
+
+
+Model: InceptionNet
+Image Compression: nearest
+Train Image Size: 224
+Test Image Size: 224
+Train accuracy: 0.955500
+Test accuracy: 0.953500
+True Negatives: 4914.000000
+False Positives: 86.000000
+False Negatives: 379.000000
+True Positives: 4621.000000
+Training Time: 8.5625 sec
+Testing Time: 3815.5625 sec
+
+
+Model: InceptionNet
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 224
+Train accuracy: 0.955500
+Test accuracy: 0.951500
+True Negatives: 4922.000000
+False Positives: 78.000000
+False Negatives: 407.000000
+True Positives: 4593.000000
+Training Time: 9.625 sec
+Testing Time: 3832.71875 sec
+
+
+Model: InceptionNet
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 224
+Train accuracy: 0.955500
+Test accuracy: 0.950600
+True Negatives: 4933.000000
+False Positives: 67.000000
+False Negatives: 427.000000
+True Positives: 4573.000000
+Training Time: 8.75 sec
+Testing Time: 3798.46875 sec
+
+
+Model: InceptionNet
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 224
+Train accuracy: 0.955500
+Test accuracy: 0.947200
+True Negatives: 4938.000000
+False Positives: 62.000000
+False Negatives: 466.000000
+True Positives: 4534.000000
+Training Time: 9.375 sec
+Testing Time: 3789.65625 sec
+
+
+Model: InceptionNet
+Image Compression: nearest
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.955500
+Test accuracy: 0.652000
+True Negatives: 1544.000000
+False Positives: 3456.000000
+False Negatives: 24.000000
+True Positives: 4976.000000
+Training Time: 9.953125 sec
+Testing Time: 2987.546875 sec
+
+
+Model: InceptionNet
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.955500
+Test accuracy: 0.702300
+True Negatives: 2074.000000
+False Positives: 2926.000000
+False Negatives: 51.000000
+True Positives: 4949.000000
+Training Time: 10.609375 sec
+Testing Time: 2993.8125 sec
+
+
+Model: InceptionNet
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.955500
+Test accuracy: 0.722500
+True Negatives: 2283.000000
+False Positives: 2717.000000
+False Negatives: 58.000000
+True Positives: 4942.000000
+Training Time: 10.46875 sec
+Testing Time: 3004.390625 sec
+
+
+Model: InceptionNet
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.955500
+Test accuracy: 0.704200
+True Negatives: 2102.000000
+False Positives: 2898.000000
+False Negatives: 60.000000
+True Positives: 4940.000000
+Training Time: 10.140625 sec
+Testing Time: 2984.953125 sec
+
+
+Model: InceptionNet
+Image Compression: nearest
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.955500
+Test accuracy: 0.500000
+True Negatives: 0.000000
+False Positives: 5000.000000
+False Negatives: 0.000000
+True Positives: 5000.000000
+Training Time: 10.46875 sec
+Testing Time: 2360.125 sec
+
+
+Model: InceptionNet
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.955500
+Test accuracy: 0.500000
+True Negatives: 0.000000
+False Positives: 5000.000000
+False Negatives: 0.000000
+True Positives: 5000.000000
+Training Time: 8.1875 sec
+Testing Time: 2353.5 sec
+
+
+Model: InceptionNet
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.955500
+Test accuracy: 0.500000
+True Negatives: 0.000000
+False Positives: 5000.000000
+False Negatives: 0.000000
+True Positives: 5000.000000
+Training Time: 10.09375 sec
+Testing Time: 2370.828125 sec
+
+
+Model: InceptionNet
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.955500
+Test accuracy: 0.500000
+True Negatives: 0.000000
+False Positives: 5000.000000
+False Negatives: 0.000000
+True Positives: 5000.000000
+Training Time: 8.875 sec
+Testing Time: 2373.3125 sec
+
+
+Model: InceptionNet
+Image Compression: nearest
+Train Image Size: 224
+Test Image Size: 224
+Train accuracy: 0.955500
+Test accuracy: 0.953500
+True Negatives: 4914.000000
+False Positives: 86.000000
+False Negatives: 379.000000
+True Positives: 4621.000000
+Training Time: 8.5625 sec
+Testing Time: 3781.359375 sec
+
+
+Model: InceptionNet
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 224
+Train accuracy: 0.955500
+Test accuracy: 0.951500
+True Negatives: 4922.000000
+False Positives: 78.000000
+False Negatives: 407.000000
+True Positives: 4593.000000
+Training Time: 8.859375 sec
+Testing Time: 3836.953125 sec
+
+
+Model: InceptionNet
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 224
+Train accuracy: 0.955500
+Test accuracy: 0.950600
+True Negatives: 4933.000000
+False Positives: 67.000000
+False Negatives: 427.000000
+True Positives: 4573.000000
+Training Time: 9.234375 sec
+Testing Time: 3784.546875 sec
+
+
+Model: InceptionNet
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 224
+Train accuracy: 0.955500
+Test accuracy: 0.947200
+True Negatives: 4938.000000
+False Positives: 62.000000
+False Negatives: 466.000000
+True Positives: 4534.000000
+Training Time: 8.875 sec
+Testing Time: 3768.53125 sec
+
+
+Model: InceptionNet
+Image Compression: nearest
+Train Image Size: 224
+Test Image Size: 200
+Train accuracy: 0.955500
+Test accuracy: 0.822500
+True Negatives: 3303.000000
+False Positives: 1697.000000
+False Negatives: 78.000000
+True Positives: 4922.000000
+Training Time: 8.984375 sec
+Testing Time: 3280.125 sec
+
+
+Model: InceptionNet
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 200
+Train accuracy: 0.955500
+Test accuracy: 0.844900
+True Negatives: 3559.000000
+False Positives: 1441.000000
+False Negatives: 110.000000
+True Positives: 4890.000000
+Training Time: 8.953125 sec
+Testing Time: 3265.15625 sec
+
+
+Model: InceptionNet
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 200
+Train accuracy: 0.955500
+Test accuracy: 0.879700
+True Negatives: 3946.000000
+False Positives: 1054.000000
+False Negatives: 149.000000
+True Positives: 4851.000000
+Training Time: 8.890625 sec
+Testing Time: 3268.578125 sec
+
+
+Model: InceptionNet
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 200
+Train accuracy: 0.955500
+Test accuracy: 0.868300
+True Negatives: 3827.000000
+False Positives: 1173.000000
+False Negatives: 144.000000
+True Positives: 4856.000000
+Training Time: 9.46875 sec
+Testing Time: 3299.765625 sec
+
+
+Model: InceptionNet
+Image Compression: nearest
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.955500
+Test accuracy: 0.652000
+True Negatives: 1544.000000
+False Positives: 3456.000000
+False Negatives: 24.000000
+True Positives: 4976.000000
+Training Time: 10.3125 sec
+Testing Time: 2999.8125 sec
+
+
+Model: InceptionNet
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.955500
+Test accuracy: 0.702300
+True Negatives: 2074.000000
+False Positives: 2926.000000
+False Negatives: 51.000000
+True Positives: 4949.000000
+Training Time: 8.640625 sec
+Testing Time: 2996.453125 sec
+
+
+Model: InceptionNet
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.955500
+Test accuracy: 0.722500
+True Negatives: 2283.000000
+False Positives: 2717.000000
+False Negatives: 58.000000
+True Positives: 4942.000000
+Training Time: 10.390625 sec
+Testing Time: 3013.625 sec
+
+
+Model: InceptionNet
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.955500
+Test accuracy: 0.704200
+True Negatives: 2102.000000
+False Positives: 2898.000000
+False Negatives: 60.000000
+True Positives: 4940.000000
+Training Time: 9.203125 sec
+Testing Time: 2998.578125 sec
+
+

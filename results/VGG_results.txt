@@ -1,0 +1,215 @@
+Model: VGG
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 1.000000
+Test accuracy: 1.000000
+True Negatives: 64.000000
+Model: VGG
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 1.000000
+Test accuracy: 1.000000
+True Negatives: 64.000000
+Model: VGG
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 1.000000
+Test accuracy: 1.000000
+True Negatives: 64.000000
+Model: VGG
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 1.000000
+Test accuracy: 1.000000
+True Negatives: 64.000000
+Model: VGG
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 1.000000
+Test accuracy: 1.000000
+True Negatives: 64.000000
+Model: VGG
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 1.000000
+Test accuracy: 1.000000
+True Negatives: 64.000000
+Model: VGG
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.000000
+Test accuracy: 0.000000
+True Negatives: 0.000000
+False Positives: 64.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 1.78125 sec
+Testing Time: 87.1875 sec
+
+
+Model: VGG
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.000000
+Test accuracy: 0.000000
+True Negatives: 0.000000
+False Positives: 64.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 1.78125 sec
+Testing Time: 85.625 sec
+
+
+Model: VGG
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.000000
+Test accuracy: 0.000000
+True Negatives: 0.000000
+False Positives: 64.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 1.765625 sec
+Testing Time: 85.578125 sec
+
+
+Model: VGG
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 128
+Model: VGG
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 128
+Model: VGG
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 128
+Model: VGG
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 1.000000
+Test accuracy: 1.000000
+True Negatives: 64.000000
+Model: VGG
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 1.000000
+Test accuracy: 1.000000
+True Negatives: 64.000000
+Model: VGG
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 1.000000
+Test accuracy: 1.000000
+True Negatives: 64.000000
+Model: VGG
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.000000
+Test accuracy: 0.000000
+True Negatives: 0.000000
+False Positives: 64.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 1.46875 sec
+Testing Time: 85.796875 sec
+
+
+Model: VGG
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 64.000000
+Test accuracy: 64.000000
+True Negatives: 64.000000
+Model: VGG
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 64.000000
+Test accuracy: 64.000000
+True Negatives: 64.000000
+Model: VGG
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 64.000000
+Test accuracy: 64.000000
+True Negatives: 64.000000
+Model: VGG
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.000000
+Test accuracy: 0.000000
+True Negatives: 0.000000
+False Positives: 64.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 1.484375 sec
+Testing Time: 85.890625 sec
+
+
+Model: VGG
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.000000
+Test accuracy: 0.000000
+True Negatives: 0.000000
+False Positives: 64.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 1.671875 sec
+Testing Time: 86.390625 sec
+
+
+Model: VGG
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.000000
+Test accuracy: 0.000000
+True Negatives: 0.000000
+False Positives: 64.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 2.0 sec
+Testing Time: 85.59375 sec
+
+
+Model: VGG
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 1.000000
+Test accuracy: 1.000000
+True Negatives: 64.000000
+Model: VGG
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 1.000000
+Test accuracy: 1.000000
+True Negatives: 64.000000
+Model: VGG
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 1.000000
+Test accuracy: 1.000000
+True Negatives: 64.000000
