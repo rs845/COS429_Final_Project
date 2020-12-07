@@ -35,7 +35,7 @@ def build_model(pretrained):
 def build_vgg(pretrained):
   model = Sequential([pretrained,
                     layers.Flatten(),
-                    layers.Dense(2, activation = "sigmoid")])
+                    layers.Dense(2, activation = "softmax")])
   model.layers[0].trainable = False
   model.compile(loss="binary_crossentropy", optimizer="adam", metrics="accuracy")
   model.summary()
@@ -68,10 +68,11 @@ def train_dense(training_steps, validation_steps, train_flow, valid_flow):
 
 def train_inception(training_steps, validation_steps, train_flow, valid_flow):
     model = InceptionV3(
-        weights= "imagenet",
+        weights="imagenet",
         include_top=False,
-        input_shape=(224,224,3)
-    ) 
+        input_shape=(224,224,3),
+        #classifier_activation="softmax",
+    )
     inceptionnet = build_model(model)
     inceptionnet.summary()
     checkpoint_path = "results/inception.ckpt"
@@ -80,7 +81,8 @@ def train_inception(training_steps, validation_steps, train_flow, valid_flow):
     cp_callback = tf.keras.callbacks.ModelCheckpoint(filepath=checkpoint_path,
                                                     save_weights_only=True,
                                                     verbose=1)
-    inc = inceptionnet.fit(
+
+    inceptionnet.fit(
         train_flow,
         epochs = 1,
         steps_per_epoch = training_steps,
@@ -88,7 +90,6 @@ def train_inception(training_steps, validation_steps, train_flow, valid_flow):
         validation_steps = validation_steps,
         callbacks = [cp_callback]
     )
-    return inceptionnet, inc
 
 def train_xception(training_steps, validation_steps, train_flow, valid_flow):
     model = Xception(
@@ -120,26 +121,18 @@ def train_VGG(training_steps, validation_steps, train_flow, valid_flow):
     model = VGG19(
         include_top = False,
         weights="imagenet",
-        input_shape=(224,224,3),
+        input_shape=(224,224,3)
     )
+    print(model.output[-1])
     VGGmodel = build_vgg(model)
-    
-    checkpoint_path = "results/vgg.ckpt"
 
-    # Create a callback that saves the model's weights
-    cp_callback = tf.keras.callbacks.ModelCheckpoint(filepath=checkpoint_path,
-                                                    save_weights_only=True,
-                                                    verbose=1)
     VGGmodel.fit(
         train_flow,
         epochs = 1,
         steps_per_epoch = training_steps,
         validation_data = valid_flow,
-        validation_steps = validation_steps,
-        callbacks = [cp_callback]
+        validation_steps = validation_steps
     )
-    return model
-    
 
 MODEL_MAP = {
     "DenseNet" : train_dense,
