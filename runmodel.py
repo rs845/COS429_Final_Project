@@ -1,13 +1,12 @@
 import cv2
 import numpy as np
 from tensorflow.keras import layers
-from tensorflow.keras.applications import DenseNet121
-from tensorflow.keras.applications import Xception
+from tensorflow.keras.applications import DenseNet121, VGG19, InceptionV3, Xception
 from tensorflow.keras.callbacks import Callback, ModelCheckpoint
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.optimizers import Adam
-from models import train, build_model
+from models import train, build_model, build_vgg
 import argparse
 import pandas as pd
 import time
@@ -39,7 +38,7 @@ COLUMNS = [
 
 # importing data
 def dataFlow(train_size, test_size):
-    base_path = '/Users/rachelsylwester/Desktop/archive/real_vs_fake/real-vs-fake/'
+    base_path = '/Users/Kids/Desktop/COS429_Final_Project/real-vs-fake/'
     image_gen = ImageDataGenerator(rescale=1./255.)
 
     train_flow = image_gen.flow_from_directory(

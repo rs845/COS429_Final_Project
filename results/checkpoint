@@ -1,2 +1,2 @@
-model_checkpoint_path: "Xception.ckpt"
-all_model_checkpoint_paths: "Xception.ckpt"
+model_checkpoint_path: "inception.ckpt"
+all_model_checkpoint_paths: "inception.ckpt"
