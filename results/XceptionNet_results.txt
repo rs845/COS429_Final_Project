@@ -222,3 +222,297 @@ Training Time: 11.987159000011161 sec
 Testing Time: 6406.901858000027 sec
 
 
+Model: XceptionNet
+Image Compression: nearest
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.858172
+Test accuracy: 0.500000
+True Negatives: 0.000000
+False Positives: 4999.000000
+False Negatives: 0.000000
+True Positives: 4999.000000
+Training Time: 12.126469 sec
+Testing Time: 5047.96506 sec
+
+
+Model: XceptionNet
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.858172
+Test accuracy: 0.500000
+True Negatives: 0.000000
+False Positives: 4999.000000
+False Negatives: 0.000000
+True Positives: 4999.000000
+Training Time: 12.29098299999987 sec
+Testing Time: 5058.28145 sec
+
+
+Model: XceptionNet
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.858172
+Test accuracy: 0.500000
+True Negatives: 0.000000
+False Positives: 4999.000000
+False Negatives: 0.000000
+True Positives: 4999.000000
+Training Time: 12.860937000001286 sec
+Testing Time: 7263.470258999998 sec
+
+
+Model: XceptionNet
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.858172
+Test accuracy: 0.500000
+True Negatives: 0.000000
+False Positives: 4999.000000
+False Negatives: 0.000000
+True Positives: 4999.000000
+Training Time: 13.171739000001253 sec
+Testing Time: 5021.874539 sec
+
+
+Model: XceptionNet
+Image Compression: nearest
+Train Image Size: 224
+Test Image Size: 224
+Train accuracy: 0.980996
+Test accuracy: 0.986097
+True Negatives: 4918.000000
+False Positives: 81.000000
+False Negatives: 58.000000
+True Positives: 4941.000000
+Training Time: 109092.657898 sec
+Testing Time: 11780.641241000005 sec
+
+
+Model: XceptionNet
+Image Compression: nearest
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.968750
+Test accuracy: 0.679688
+True Negatives: 87.000000
+False Positives: 41.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 13.301378999999999 sec
+Testing Time: 80.05478000000001 sec
+
+
+Model: XceptionNet
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.968750
+Test accuracy: 0.671875
+True Negatives: 86.000000
+False Positives: 42.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 13.314525000000003 sec
+Testing Time: 79.52944900000001 sec
+
+
+Model: XceptionNet
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.968750
+Test accuracy: 0.625000
+True Negatives: 80.000000
+False Positives: 48.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 13.29902100000001 sec
+Testing Time: 79.92748599999999 sec
+
+
+Model: XceptionNet
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.968750
+Test accuracy: 0.632812
+True Negatives: 81.000000
+False Positives: 47.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 13.256978000000004 sec
+Testing Time: 80.23328799999996 sec
+
+
+Model: XceptionNet
+Image Compression: nearest
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.968750
+Test accuracy: 0.054688
+True Negatives: 7.000000
+False Positives: 121.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 12.748425999999995 sec
+Testing Time: 65.093117 sec
+
+
+Model: XceptionNet
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.968750
+Test accuracy: 0.023438
+True Negatives: 3.000000
+False Positives: 125.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 11.77590600000002 sec
+Testing Time: 64.09258100000005 sec
+
+
+Model: XceptionNet
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.968750
+Test accuracy: 0.023438
+True Negatives: 3.000000
+False Positives: 125.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 12.007304999999974 sec
+Testing Time: 63.2568389999999 sec
+
+
+Model: XceptionNet
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.968750
+Test accuracy: 0.023438
+True Negatives: 3.000000
+False Positives: 125.000000
+False Negatives: 0.000000
+True Positives: 0.000000
+Training Time: 11.848598000000038 sec
+Testing Time: 63.312017999999966 sec
+
+
+Model: XceptionNet
+Image Compression: nearest
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.980996
+Test accuracy: 0.516903
+True Negatives: 173.000000
+False Positives: 4826.000000
+False Negatives: 4.000000
+True Positives: 4995.000000
+Training Time: 12.727763999999999 sec
+Testing Time: 5702.2243069999995 sec
+
+
+Model: XceptionNet
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.980996
+Test accuracy: 0.506201
+True Negatives: 63.000000
+False Positives: 4936.000000
+False Negatives: 1.000000
+True Positives: 4998.000000
+Training Time: 13.463947999999618 sec
+Testing Time: 5882.450677 sec
+
+
+Model: XceptionNet
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.980996
+Test accuracy: 0.505401
+True Negatives: 55.000000
+False Positives: 4944.000000
+False Negatives: 1.000000
+True Positives: 4998.000000
+Training Time: 13.789962999999261 sec
+Testing Time: 5911.364644000001 sec
+
+
+Model: XceptionNet
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 128
+Train accuracy: 0.980996
+Test accuracy: 0.504201
+True Negatives: 42.000000
+False Positives: 4957.000000
+False Negatives: 0.000000
+True Positives: 4999.000000
+Training Time: 13.621852000000217 sec
+Testing Time: 5752.258095999998 sec
+
+
+Model: XceptionNet
+Image Compression: nearest
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.980996
+Test accuracy: 0.831666
+True Negatives: 3326.000000
+False Positives: 1673.000000
+False Negatives: 10.000000
+True Positives: 4989.000000
+Training Time: 12.497255000000001 sec
+Testing Time: 6667.4103190000005 sec
+
+
+Model: XceptionNet
+Image Compression: box
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.980996
+Test accuracy: 0.804061
+True Negatives: 3049.000000
+False Positives: 1950.000000
+False Negatives: 9.000000
+True Positives: 4990.000000
+Training Time: 13.49330000000009 sec
+Testing Time: 6613.619007999999 sec
+
+
+Model: XceptionNet
+Image Compression: lanczos
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.980996
+Test accuracy: 0.797259
+True Negatives: 2977.000000
+False Positives: 2022.000000
+False Negatives: 5.000000
+True Positives: 4994.000000
+Training Time: 12.812404000000242 sec
+Testing Time: 6484.961694 sec
+
+
+Model: XceptionNet
+Image Compression: hamming
+Train Image Size: 224
+Test Image Size: 176
+Train accuracy: 0.980996
+Test accuracy: 0.776355
+True Negatives: 2770.000000
+False Positives: 2229.000000
+False Negatives: 7.000000
+True Positives: 4992.000000
+Training Time: 12.678250999997545 sec
+Testing Time: 6440.213097 sec
+
+

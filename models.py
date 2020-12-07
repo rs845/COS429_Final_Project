@@ -95,8 +95,8 @@ def train_xception(training_steps, validation_steps, train_flow, valid_flow):
     model = Xception(
         weights="imagenet",
         include_top=False,
-        input_shape=(224,224,3)
-        # classifier_activation="softmax",
+        input_shape=(224,224,3),
+        classifier_activation="sigmoid"
     )
     Xceptionnet = build_model(model)
     Xceptionnet.summary()
