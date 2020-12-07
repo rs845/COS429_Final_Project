@@ -230,8 +230,8 @@ if __name__ == "__main__":
     # compression = args.compression
 
     compression_sizes = [
-        #224,
-        176
+        224,
+        #176
         #128
     ]
 
