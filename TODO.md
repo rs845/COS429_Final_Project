@@ -1,15 +1,16 @@
 # Models
 - [ ] Basic CNN Model from paper on [Generalization of GAN Forensics](https://arxiv.org/pdf/1902.11153.pdf)
 - [ ] AlexNet
-- [ ] DenseNet
-- [ ] InceptionNet v3
-- [ ] XceptionNet
+- [X] DenseNet
+- [X] InceptionNet v3
+- [X] XceptionNet
 - [ ] Patch Based Architecture
 
 # Compression Algorithms
-- Facebook Spectrum
-- lossless
-- lossy compression
+- nearest
+- box
+- lanczos
+- hamming
 
 # Additional performance factors
 - Gaussian Blur 
@@ -21,13 +22,13 @@
 - confusion matrix comparison
 
 # Written Work
-- [ ] Project Motivation
-- [ ] Project Goal
-- [ ] Related Work
+- [X] Project Motivation
+- [X] Project Goal
+- [X] Related Work
 - [ ] Implementation
   - [ ] Description of models
   - [ ] Description of compression algorithms
-  - [ ] 
+  - [ ] dataset
 - [ ] Results/ Discussion
   - [ ] model performance comparison
   - [ ] compression algoritm comparison
